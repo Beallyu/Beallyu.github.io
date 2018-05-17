@@ -1,0 +1,15 @@
+<div class="universe" (click)="createHeart($event)">
+  <div class="stars"></div>
+  <div class="twinkling"></div>
+  <div class="clouds"></div>
+  <div *ngFor="let heart of hearts" class="hearts" [class.animate]="heart.left" [style.left.px]="heart.left" [style.top.px]="heart.top">
+    <img class="heart" src="../../assets/heart.png" alt="heart stars"/>
+    <!-- <img class="wind" src="../../assets/wind.png" alt="wind"> -->
+    <img class="meteor" src="../../assets/meteor.png" alt="meteor"/>
+    <img class="meteor two" src="../../assets/meteor.png" alt="meteor"/>
+    <img class="meteor three" src="../../assets/meteor.png" alt="meteor"/>
+  </div>
+  <div *ngIf="hearts.length > 0" class="love-container">
+    <div class="love">I Love you</div>
+  </div>
+</div>
